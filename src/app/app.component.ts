@@ -30,14 +30,14 @@ scene.add(light1);
 var geometry = new THREE.TorusKnotGeometry(100, 30, 100, 100);
 var material = new THREE.MeshLambertMaterial({color: 0xF33333});
 var mesh = new THREE.Mesh(geometry, material);
-mesh.position.set(0, 0, -2000);
+mesh.position.set(0, 0, -1500);
 
 scene.add(mesh);
 
 requestAnimationFrame(render);
 
 function render() {
-  mesh.rotation.x += 0.05;
+  mesh.rotation.x += 0.01;
   mesh.rotation.y += 0.01;
   renderer.render(scene, camera);
   requestAnimationFrame(render);
